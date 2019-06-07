@@ -31,7 +31,7 @@ const ImageSchema = new Schema({
 //Variable virtual, llama sin la extensión
 ImageSchema.virtual('uniqueId')
 	.get(function(){
-		return this.filename.replace(path.extname(this.filename));
+		return this.filename.replace(path.extname(this.filename),'');
 
 	})
 
